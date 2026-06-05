@@ -8,9 +8,10 @@ public class QuizService {
 	
 	private String[] userAnswered = new String[5];
 	private Question[] questions;
+	QuestionService questionService;
 	
-	public QuizService() {
-		QuestionService questionService = new QuestionService();
+	public QuizService(QuestionService questionService) {
+		this.questionService = questionService; 
 		questions = questionService.getAllQuestion();
 	}
 

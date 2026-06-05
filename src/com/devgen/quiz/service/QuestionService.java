@@ -6,21 +6,33 @@ public class QuestionService {
 
     //QuestionService is used for Maintaining Questions. - by using ( CRUD ) operation -Create, Read, Update, Delete 
 
-    private Question[] questions = new Question[5];
+    private Question[] questions = new Question[10];
+    private int current;
     
    
     
     public QuestionService() {
     	
-    	questions[0] = new Question(1,"What is 2 + 2", "4","3","2","5","4");
-    	questions[1] = new Question(2,"What is 2 + 3", "4","3","2","5","5");
-    	questions[2] = new Question(3,"What is 1 + 2", "4","3","2","5","3");
-    	questions[3] = new Question(4,"What is 2 + 2 + 3 - 3", "4","3","2","5","4");
-    	questions[4] = new Question(5,"What is 2 + 5 - 6", "4","3","2","1","1");
+    	questions[current] = new Question(1,"What is 2 + 2", "4","3","2","5","4");
+    	current++; 
+    	
+    	questions[current] = new Question(2,"What is 2 + 3", "4","3","2","5","5");
+    	current++; 
+    	
+    	questions[current] = new Question(3,"What is 1 + 2", "4","3","2","5","3");
+    	current++; 
+    	
+    	questions[current] = new Question(4,"What is 2 + 2 + 3 - 3", "4","3","2","5","4");
+    	current++; 
+    	
+    	questions[current] = new Question(5,"What is 2 + 5 - 6", "4","3","2","1","1");
+    	current++; 
     	 
     }
     
     public String addQuestion(Question question) {
+    	questions[current] = question;
+    	current++; 
     	return "Question Added Successfully";
     }
     
