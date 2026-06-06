@@ -15,19 +15,19 @@ public class QuestionService {
     	
     	questions = new Question[size];
     	
-    	questions[current] = new Question(1,"What is 2 + 2", "4","3","2","5","4");
+    	questions[current] = new Question(1,"What is 2 + 2",new String[] {"4","3","2","5"},"4");
     	current++; 
     	
-    	questions[current] = new Question(2,"What is 2 + 3", "4","3","2","5","5");
+    	questions[current] = new Question(2,"What is 2 + 3", new String[] {"4","5"},"5");
     	current++; 
     	
-    	questions[current] = new Question(3,"What is 1 + 2", "4","3","2","5","3");
+    	questions[current] = new Question(3,"What is 1 + 2", new String[] {"4","3","2","5"},"3");
     	current++; 
     	
-    	questions[current] = new Question(4,"What is 2 + 2 + 3 - 3", "4","3","2","5","4");
+    	questions[current] = new Question(4,"What is 2 + 2 + 3 - 3", new String[] {"4","3","2"},"4");
     	current++; 
     	
-    	questions[current] = new Question(5,"What is 2 + 5 - 6", "4","3","2","1","1");
+    	questions[current] = new Question(5,"What is 2 + 5 - 6", new String[] {"4","3","2","1"},"1");
     	current++; 
     	 
     }
