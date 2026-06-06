@@ -15,19 +15,19 @@ public class QuestionService {
     	
     	questions = new Question[size];
     	
-    	questions[current] = new Question(1,"What is 2 + 2",new String[] {"4","3","2","5"},"4");
+    	questions[current] = new Question(1,"What is 2 + 2",new String[] {"4","3","2","5"},1);
     	current++; 
     	
-    	questions[current] = new Question(2,"What is 2 + 3", new String[] {"4","5"},"5");
+    	questions[current] = new Question(2,"Does Java is Object Oriented Lang ?", new String[] {"true","false"},1);
     	current++; 
     	
-    	questions[current] = new Question(3,"What is 1 + 2", new String[] {"4","3","2","5"},"3");
+    	questions[current] = new Question(3,"What is 1 + 2", new String[] {"4","3","2","5"},2);
     	current++; 
     	
-    	questions[current] = new Question(4,"What is 2 + 2 + 3 - 3", new String[] {"4","3","2"},"4");
+    	questions[current] = new Question(4,"How fo you create variable with numeric value 5?", new String[] {"int x=5","float f=4.5","num x=5"},1);
     	current++; 
     	
-    	questions[current] = new Question(5,"What is 2 + 5 - 6", new String[] {"4","3","2","1"},"1");
+    	questions[current] = new Question(5,"What is 2 + 5 - 6", new String[] {"4","3","2","1"},4);
     	current++; 
     	 
     }

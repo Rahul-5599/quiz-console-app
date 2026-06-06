@@ -6,10 +6,10 @@ public class Question {
     private int id;
     private String question;
     private String[] options; 
-    private String answer;
+    private int answer;
 
     public Question(int id, String question, String[] options,
-            String answer) {
+            int answer) {
         this.id = id;
         this.question = question;
         this.options = options;
@@ -40,12 +40,8 @@ public class Question {
 		this.options = options;
 	}
 
-    public String getAnswer() {
+    public int getAnswer() {
         return answer;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
     }
 
 	@Override
