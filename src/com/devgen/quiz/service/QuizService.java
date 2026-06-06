@@ -49,7 +49,20 @@ public void playQuiz() {
     	
     	double percentage = ((double)correctAnswer / questions.length) * 100;
     	
+    	String suggestion = getSuggestion(percentage);
+    	    	
+    	QuizResult quizResult = new QuizResult(correctAnswer, incorrectAnswer, percentage, suggestion);
+    	
+    	return quizResult;
+    	
+    	
+    	
+    }
+    
+    private String getSuggestion(double percentage) {
+    	
     	String suggestion = "";
+    	
     	if(percentage>=0 && percentage<=30) {
     		suggestion = "You Must Study Harder";
     	} else if(percentage>=31 && percentage<=60) {
@@ -59,15 +72,9 @@ public void playQuiz() {
     	} else {
     		suggestion = "You are very good at concepts and being into top list";
     	}
-    	
-    	
-    	QuizResult quizResult = new QuizResult(correctAnswer, incorrectAnswer, percentage, suggestion);
-    	
-    	return quizResult;
-    	
-    	
-    	
+    	return suggestion;
     }
 	
+    
 	
 }
