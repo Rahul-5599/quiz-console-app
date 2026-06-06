@@ -7,7 +7,7 @@ public class QuestionServiceClient {
 	
 	public static void main(String[] args) {
 		
-		QuestionService questionService = new QuestionService();
+		QuestionService questionService = new QuestionService(10);
 		
 		Question question1 = new Question(6, "What is 10 + 10 * 10", "100", "110", "120", "130", "110");
 		questionService.addQuestion(question1);
@@ -23,7 +23,7 @@ public class QuestionServiceClient {
 		
 		Question question5 = new Question(10, "What is 10 + 25 * 10", "200", "250", "260", "270", "260");
 		questionService.addQuestion(question5);
-	}
+ 	}
 	
 
 }
