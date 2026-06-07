@@ -15,7 +15,12 @@ public class QuestionService {
     	
     	questions = new Question[size];
     	
-    	questions[current] = new Question(1,"What is 2 + 2",new String[] {"4","3","2","5"},1);
+    	intializeDefaultQuestions(); 
+    	 
+    }
+
+	private void intializeDefaultQuestions() {
+		questions[current] = new Question(1,"What is 2 + 2",new String[] {"4","3","2","5"},1);
     	current++; 
     	
     	questions[current] = new Question(2,"Does Java is Object Oriented Lang ?", new String[] {"true","false"},1);
@@ -28,9 +33,8 @@ public class QuestionService {
     	current++; 
     	
     	questions[current] = new Question(5,"What is 2 + 5 - 6", new String[] {"4","3","2","1"},4);
-    	current++; 
-    	 
-    }
+    	current++;
+	}
     
     public String addQuestion(Question question) {
     	questions[current] = question;
