@@ -23,6 +23,19 @@ public class QuestionServiceClient {
 		
 		Question question5 = new Question(10, "What is 10 + 25 * 10", new String[] {"200", "250", "260", "270"}, 3);
 		questionService.addQuestion(question5);
+		
+		Question[] questions = questionService.getAllQuestion();
+		Question originalQuestion = questions[2];
+		originalQuestion.setAnswer(2); // updated new answer
+		originalQuestion.setQuestion("What is one + two");
+		
+		questionService.updateQuestion(originalQuestion);
+		
+		
+		questions = questionService.getAllQuestion();
+		for(Question q : questions)
+			System.out.println(q);
+		
  	}
 	
 

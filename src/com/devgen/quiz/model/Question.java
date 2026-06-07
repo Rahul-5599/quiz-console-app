@@ -44,6 +44,10 @@ public class Question {
         return answer;
     }
 
+	public void setAnswer(int answer) {
+		this.answer = answer;
+	}
+
 	@Override
 	public String toString() {
 		return "Question [id=" + id + ", question=" + question + ", options=" + Arrays.toString(options) + ", answer="
